@@ -8,7 +8,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 1% 3%;
-    background-color: #333;
+    background-color: #FFC700;
 }
 
 .navbar ul {
@@ -23,7 +23,7 @@ body {
 }
 
 .navbar ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 8px 16px;
     white-space: nowrap;
@@ -34,5 +34,10 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
+}
+
+.bakbild {
+    height: 1%;
+    width: 100%;
 }
