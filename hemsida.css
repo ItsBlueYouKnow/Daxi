@@ -51,6 +51,7 @@ body {
     display: block;
     margin: 0;
     padding: 0;
+    background-image: url('hhhs.webp');
 }
 
 footer {
@@ -79,4 +80,11 @@ footer {
     text-decoration: none;
     margin: 0 10px;
     font-size: 14px;
+}
+
+.navbar ul li .boka-taxi{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #1F618D;
 }

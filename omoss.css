@@ -80,3 +80,8 @@ footer {
     margin: 0 10px;
     font-size: 14px;
 }
+
+.bg{
+    width: 100%;
+    height: 100%;
+}
