@@ -1,9 +1,20 @@
+*{
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
     width: 100%;
+    /*background-image: url('hhhs.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; */
+    margin-top: 100px;
+    
 }
 
 .navbar {
@@ -37,6 +48,10 @@ body {
     white-space: nowrap;
 }
 
+.navbar a:hover{
+    background-color: yellow;
+}
+
 .logo {
     margin-right: 60%;
 }
@@ -45,38 +60,33 @@ body {
     height: 60px;
 }
 
-.bakbild {
-    height: auto;
-    width: 110%;
-    display: block;
-    margin: 0;
-    padding: 0;
+.container {
+    max-width: 1200px; /* maximum bredd */
+    margin: 0 auto;    /* centrera horisontellt */
+    padding: 0 15%;   /* Add space on the edges */
 }
 
-footer {
-    background-color: #FFC700;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    margin: 0;
+h1 {
+ font-size: 40px;
+ text-decoration: underline #FFC700;
+ text-underline-offset: 10px;
 }
 
-.footer-container {
+#kortbild {
+    width: 200px;
+    height: 200px;
+}
+
+.textmedbild {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.footer-info {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.footer-links a {
-    color: black;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
+.priserlåda{
+    display: flex;
+    gap: 100px;
+    border:solid #FFC700;
+    border-width: 3px;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 20px;
 }
