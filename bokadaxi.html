@@ -20,16 +20,72 @@
         </ul>
     </nav>
 
-    <div class="form-container">
-        <input type="text" class="input-box" placeholder="First Input">
-        <input type="text" class="input-box" placeholder="Second Input">
+    <div class="container">
+        <h1>Var vill du åka?</h1>
+        <div class="sökfunktion">
+            <form id="distansform">
+                
+                <select id="location1" required>
+                    <option value="" disabled selected>Från</option>
+                    <option value="göteborg">Göteborg</option>
+                    <option value="stockholm">Stockholm</option>
+                    <option value="skåne">Skåne</option>
+                </select>
+    
+                
+                <select id="location2" required>
+                    <option value="" disabled selected>Till</option>
+                    <option value="göteborg">Göteborg</option>
+                    <option value="stockholm">Stockholm</option>
+                    <option value="skåne">Skåne</option>
+                </select>
+                <br>
+                <button type="submit">Sök</button>
+            </form>
+        </div>
+        <div class="result" id="result"></div>
     </div>
 
-    <footer>
-        <div class="footer-info">
-            <p>&copy; 2024 DAXI.</p>
-        </div>
+    <script>
+        document.getElementById("distansform").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const location1 = document.getElementById("location1").value;
+            const location2 = document.getElementById("location2").value;
+
+            if (location1 === location2) {
+                document.getElementById("result").innerText = "Both locations are the same. Distance is 0 km.";
+                return;
+            }
+
+            const distances = {
+                "göteborg-stockholm": 10,
+                "göteborg-stockholm": 10,
+                "göteborg-skåne": 15,
+                "skåne-göteborg": 15,
+                "stockholm-skåne": 20,
+                "skåne-stockholm": 20
+            };
+
+            const pair = [location1, location2].sort().join("-");
+            const distance = distances[pair];
+
+            if (distance !== undefined) {
+                document.getElementById("result").innerText = `The distance between ${capitalize(location1)} and ${capitalize(location2)} is ${distance} km.`;
+            } else {
+                document.getElementById("result").innerText = "Unable to calculate distance.";
+            }
+        });
+
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+    </script>
+
+    <footer class="footer">
+        <p>&copy; 2024 Daxi. Alla rättigheter förbehållna.</p>
     </footer>
+    
 </body>
 
 </html>
